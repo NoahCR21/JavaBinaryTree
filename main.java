@@ -16,14 +16,14 @@ class main {
             System.out.println("Set value:");
             int readValue = input.nextInt();
             input.nextLine();
-            /*
+            
             System.out.println("Set string:");
             String readLine = input.nextLine();
             
             tree.addNode(readValue, readLine);
 
-            */
-            tree.addNode(readValue, "yes");
+            
+            
         }
 
         
@@ -48,9 +48,11 @@ class main {
         tree.preOrderTraversal(tree.root);
         System.out.println("\nPost Order Traversal: \n");
         tree.postOrderTraversal(tree.root);
+        
+        System.out.println("\n" + tree.minMaxValues(tree.root)); 
 
 
-        System.out.println("Search for # value:");
+        System.out.println("\nSearch for # value:");
         readInt = input.nextInt();
         
 

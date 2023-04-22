@@ -3,6 +3,8 @@
 public class BinaryTree {
     
     Node root;
+    static int maxValue;
+    static int minValue;
 
     public void addNode(int key, String name) {
 
@@ -215,6 +217,32 @@ public class BinaryTree {
 
             
         }
+    }
+
+    public String minMaxValues(Node focusNode) {
+
+
+        if(focusNode != null){
+            
+
+            if(focusNode.key >= maxValue) {
+                maxValue = focusNode.key;
+                
+            }
+            if(focusNode.key <= minValue || minValue == 0) {
+                minValue = focusNode.key;
+            }
+            
+            minMaxValues(focusNode.leftChild);
+            minMaxValues(focusNode.rightChild);
+            
+        }
+        
+        
+        
+        
+        
+        return "Max: " + maxValue + "\nMin: " + minValue;  
     }
 
     
